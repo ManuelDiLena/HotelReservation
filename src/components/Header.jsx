@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { AppBar, Avatar, Drawer, IconButton, InputBase, List, ListItem, makeStyles, Toolbar, Typography } from '@material-ui/core'
+import { AppBar, Avatar, Drawer, IconButton, InputBase, List, ListItem, makeStyles, Toolbar } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search'
 import MenuIcon from '@material-ui/icons/Menu'
 import logo from '../images/logo.png'
@@ -75,7 +75,6 @@ const Header = () => {
                     <SearchIcon className={classes.text}/>
                 </div>
                 <div className={classes.right}>
-                    <Typography className={classes.text}>SIGN IN</Typography>
                     <Avatar className={classes.avatar}/>
                 </div>
             </Toolbar>
