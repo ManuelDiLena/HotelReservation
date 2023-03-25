@@ -45,8 +45,9 @@ const DatePicker = () => {
 const useStyle = makeStyles((theme) => ({
     root: {
         position: 'absolute',
-        top: '13vh',
+        top: '20vh',
         left: '30vw',
+        zIndex: '50',
         [theme.breakpoints.down('xs')]: {
             top: '16vh',
             left: 0,
@@ -70,6 +71,7 @@ const useStyle = makeStyles((theme) => ({
         textAlign: 'center',
         padding: '3px',
         fontSize: '16px',
+        fontWeight: 'bold',
         textDecoration: 'none',
         textTransform: 'uppercase',
     },
@@ -80,7 +82,8 @@ const useStyle = makeStyles((theme) => ({
     },
     input: {
         width: '5vw',
-        border: '1px solid #000',
+        border: '1px solid #E9E2D0',
+        borderRadius: '3px',
         margin: theme.spacing(0,2,2,0),
         padding: theme.spacing(1,0,1,3)
     }
