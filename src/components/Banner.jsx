@@ -19,7 +19,7 @@ const Banner = () => {
 // Constant with object to generate styles
 const useStyle = makeStyles((theme) => ({
     root: {
-        height: '70vh',
+        height: '75vh',
         position: 'relative',
         backgroundImage: `url(${bannerBkg})`,
         backgroundPosition: 'center',

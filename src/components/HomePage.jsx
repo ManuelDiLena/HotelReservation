@@ -1,5 +1,6 @@
 import { React, useState } from 'react'
-import { Button, CssBaseline, makeStyles } from '@material-ui/core'
+import { Button, CssBaseline, Grid, makeStyles } from '@material-ui/core'
+import mockData from '../mockData';
 import Banner from './Banner'
 import RoomCard from './RoomCard'
 import DatePicker from './DatePicker'
@@ -13,6 +14,7 @@ const HomePage = () => {
         <>
             <CssBaseline />
             <div className={classes.root}>
+                <Banner />
                 <div className={classes.dates}>
                     <Button onClick={ () => setShowCalendar(!showCalendar) }>
                         {
@@ -23,10 +25,20 @@ const HomePage = () => {
                 {
                     showCalendar && <DatePicker />
                 }
-                <Banner />
-                <div className={classes.section}>
-                    <RoomCard />
-                </div>
+                <Grid container className={classes.section} spacing={1}>
+                    {
+                        mockData.map(({src, title, description}, index) => (
+                            <Grid item sm='6' md='5' lg='4'>
+                                <RoomCard 
+                                    src={src} 
+                                    title={title} 
+                                    description={description} 
+                                    key={index}
+                                />
+                            </Grid>
+                        ))
+                    }
+                </Grid>
             </div>
         </>
     )
@@ -36,7 +48,7 @@ const HomePage = () => {
 const useStyle = makeStyles((theme) => ({
     root: {
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
     },
     dates : {
         display: 'flex',
