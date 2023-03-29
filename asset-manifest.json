@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/HotelReservation/static/css/main.08bfdcd3.css",
+    "main.js": "/HotelReservation/static/js/main.8725ad7c.js",
+    "static/media/bannerBkg.jpg": "/HotelReservation/static/media/bannerBkg.8e7bc79bd7ed0032ffca.jpg",
+    "static/media/bar.jpg": "/HotelReservation/static/media/bar.457a66f8e70411340508.jpg",
+    "static/media/executive.jpg": "/HotelReservation/static/media/executive.673a35b4d5bcaf1ada6c.jpg",
+    "static/media/standard.jpg": "/HotelReservation/static/media/standard.51741fb682ada20f837f.jpg",
+    "static/media/indoorPool.jpg": "/HotelReservation/static/media/indoorPool.672dd3f3bd2812227126.jpg",
+    "static/media/withBalcony.jpg": "/HotelReservation/static/media/withBalcony.41e10a33a2bd26765512.jpg",
+    "static/media/juniorSuite.jpg": "/HotelReservation/static/media/juniorSuite.49cf48e84cb6f72a3229.jpg",
+    "static/media/allInclusive.jpg": "/HotelReservation/static/media/allInclusive.9aa960a6ce5d9eb02f3c.jpg",
+    "static/media/suite.jpg": "/HotelReservation/static/media/suite.2e1d64bc8042ec063792.jpg",
+    "static/media/logo.png": "/HotelReservation/static/media/logo.fe9460c415c54b4fbd8e.png",
+    "index.html": "/HotelReservation/index.html",
+    "main.08bfdcd3.css.map": "/HotelReservation/static/css/main.08bfdcd3.css.map",
+    "main.8725ad7c.js.map": "/HotelReservation/static/js/main.8725ad7c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.08bfdcd3.css",
+    "static/js/main.8725ad7c.js"
+  ]
+}
