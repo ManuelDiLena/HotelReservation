@@ -1,23 +1,33 @@
 import React from 'react'
-import { Button, InputBase, makeStyles, Typography } from '@material-ui/core';
-import 'react-date-range/dist/styles.css'; 
-import 'react-date-range/dist/theme/default.css'; 
-import { DateRangePicker } from 'react-date-range';
-import { People } from '@material-ui/icons';
-import { Link } from 'react-router-dom';
-
-// Configuration of the ranges in which the calendar will be displayed
-const selectionRange = {
-    startDate: new Date(2023,2,21),
-    endDate: new Date(2023, 2, 21),
-    key: 'selection'
-}
+import { Button, InputBase, makeStyles, Typography } from '@material-ui/core'
+import 'react-date-range/dist/styles.css'
+import 'react-date-range/dist/theme/default.css'
+import { DateRangePicker } from 'react-date-range'
+import { People } from '@material-ui/icons'
+import { Link } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { selectStart, setStart } from '../features/startSlice'
+import { selectEnd, setEnd } from '../features/endSlice'
 
 const DatePicker = () => {
 
     const classes = useStyle()
+    const start = useSelector(selectStart)
+    const end = useSelector(selectEnd)
+    const dispatch = useDispatch()
 
-    const handleSelect = () => {}
+    // Configuration of the ranges in which the calendar will be displayed
+    const selectionRange = {
+        startDate: start,
+        endDate: end,
+        key: 'selection'
+    }
+
+    const handleSelect = (ranges) => {
+        console.log(ranges)
+        dispatch(setStart(ranges.selection.startDate.getTime()))
+        dispatch(setEnd(ranges.selection.endDate.getTime()))
+    }
 
     return (
         <div className={classes.root}>

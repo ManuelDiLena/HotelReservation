@@ -49,17 +49,17 @@ const mockData = [
         title: 'Rooms with balcony',
         description: 'Rooms with amazing sea views',
         cat: 'room',
-        price: 175,
+        price: 200,
         stock: 15,
         notAvailableStart: new Date(2023, 4, 10).getTime(),
         notAvailableEnd: new Date(2023, 4, 10).getTime()
     },
     {
         src: juniorSuite,
-        title: 'Junior suite with kitchenette',
+        title: 'Junior suite',
         description: 'Our junior suites are perfect for families',
         cat: 'room',
-        price: 225,
+        price: 250,
         stock: 10,
         notAvailableStart: new Date(2023, 4, 10).getTime(),
         notAvailableEnd: new Date(2023, 4, 10).getTime()
@@ -69,7 +69,7 @@ const mockData = [
         title: 'Our corner suite',
         description: 'Discrete and luxurious with butler service',
         cat: 'room',
-        price: 350,
+        price: 300,
         stock: 4,
         notAvailableStart: new Date(2023, 4, 20).getTime(),
         notAvailableEnd: new Date(2023, 4, 25).getTime()
@@ -79,7 +79,7 @@ const mockData = [
         title: 'All inclusive hotels',
         description: 'Best hotels with all services and more',
         cat: 'room',
-        price: 300,
+        price: 350,
         stock: 7,
         notAvailableStart: new Date(2023, 6, 15).getTime(),
         notAvailableEnd: new Date(2023, 7, 15).getTime()

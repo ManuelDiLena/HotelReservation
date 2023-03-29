@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, makeStyles, Typography } from '@material-ui/core'
 import bannerBkg from '../images/bannerBkg.jpg'
+import { Link } from 'react-router-dom'
 
 const Banner = () => {
 
@@ -10,7 +11,9 @@ const Banner = () => {
         <div className={classes.root}>
             <div className={classes.info}>
                 <Typography variant='h2'>Plan your getaway...</Typography>
-                <Button variant='contained'>Check our rooms</Button>
+                <Link to='/search' className={classes.btnBanner}>
+                    <Button variant='contained'>Check our rooms</Button>
+                </Link>
             </div>  
         </div>
     )
@@ -44,6 +47,9 @@ const useStyle = makeStyles((theme) => ({
         '& button:hover': {
             backgroundColor: '#D1395C'
         }
+    },
+    btnBanner: {
+        textDecoration: 'none'
     }
 }))
 

@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Chip, makeStyles, Slider, Typography } from '@material-ui/core'
 import mockData, { chips } from '../mockData'
 import { HighlightOffTwoTone } from '@material-ui/icons'
 import Results from './Results'
+import { useSelector } from 'react-redux'
+import { selectStart } from '../features/startSlice'
+import { selectEnd } from '../features/endSlice'
 
 const SearchPage = () => {
 
     const classes = useStyle()
+    const [value, setValue] = useState(400)
+    const start = useSelector(selectStart)
+    const end = useSelector(selectEnd)
+
+    // Function to capture the value of the price slider
+    const handleChange = (e, newValue) => {
+        setValue(newValue);
+    }
 
     return (
         <div className={classes.root}>
@@ -31,7 +42,8 @@ const SearchPage = () => {
             </div>
             <div className={classes.selector}>
                 <Typography gutterBottom>Prices</Typography>
-                <Slider 
+                <Slider value={value} 
+                    onChange={handleChange}
                     aria-labelledby='range-slider'
                     min={100}
                     max={400}
@@ -42,6 +54,8 @@ const SearchPage = () => {
             {
                 mockData
                     .filter((data) => data.cat === 'room')
+                    .filter((data) => data.price < value)
+                    .filter((data) => end < data.notAvailableStart || start > data.notAvailableEnd)
                     .map(({src, title, description, price, stock}, index) => (
                         <Results title={title}
                             key={index}
